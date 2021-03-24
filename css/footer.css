@@ -5,6 +5,9 @@ footer img{
 .right{
     text-align: right;
 }
+.left{
+    text-align:left;
+}
 footer img:hover{
     cursor: pointer;
 }
