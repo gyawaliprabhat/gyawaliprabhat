@@ -1,0 +1,20 @@
+body{
+    
+}
+.center{
+    text-align: center;
+}
+.left{
+    text-align: left;
+}
+.right{
+    text-align: right;
+}
+.card{
+    position: absolute; 
+    left:50%;
+    margin-left: -250px;
+    width: 500px;
+
+    box-shadow: 0 4px 8px 15px rgba(8, 20, 126, 0.2);
+}
