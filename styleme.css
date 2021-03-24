@@ -1,0 +1,20 @@
+body{
+    background-color:whitesmoke;
+}
+h1{
+    color: blue;
+}
+img{
+    height:200px;
+    width: 200px;
+    border-radius:40px;
+}
+h2{
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    color: darkblue;
+    
+}
+span{
+    font-style:italic;
+}

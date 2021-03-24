@@ -1,5 +1,8 @@
 body{
-    
+    margin: 0;
+padding: 0;
+font-size: 100%;
+line-height: 1;
 }
 .center{
     text-align: center;
@@ -15,6 +18,29 @@ body{
     left:50%;
     margin-left: -250px;
     width: 500px;
-
     box-shadow: 0 4px 8px 15px rgba(8, 20, 126, 0.2);
+}
+ol li{
+    list-style-type:upper-roman;
+}
+
+.cover{
+    background-image: url("images/cover.jpg");
+    background-position: 370px 0px;
+    background-size:cover;
+    opacity:1;
+}
+.profile{
+    padding:5px 0 0 0;
+    text-align:center;
+    top: 40%;
+    opacity: 1;
+    
+}
+.introduction{
+    text-align: center;
+}
+
+.profile img{
+    border-radius: 30px;
 }
