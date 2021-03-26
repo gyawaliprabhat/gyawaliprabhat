@@ -38,7 +38,6 @@ h1{
     font-weight: bold;
     position:absolute;
 }
-
 .content-banner{
     height:83px;
     background-image:url("./images/rbg.png");
@@ -59,8 +58,8 @@ h1{
     display:inline-block;
     vertical-align: top;
     padding-bottom: 20pt;
+    width:100%;
 }
-
 .quote-box{
     border: 2px gray solid;
     border-radius: 10px;
