@@ -43,14 +43,21 @@ h1{
     height:83px;
     background-image:url("./images/rbg.png");
 }
+.review-left-side{
+    width:47%;
+    float:left;
+}
+.review-right-side{
+    width:47%;
+    float:right;
+}
 .review{
     margin:2%;
     font-size:8pt;
 }
-.rev-col-left{
+.review-column{
     display:inline-block;
     vertical-align: top;
-    width:47%;
     padding-bottom: 20pt;
 }
 
