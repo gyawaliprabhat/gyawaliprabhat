@@ -7,93 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #a,
-        #b {
-            width: 100px;
-            height: 100px;
-            font: 30pt bold Helvetica, Arial, sans-serif;
-            line-height: 100px;
-            text-align: center;
+        .center {
+          line-height: 0px;
+          height: 200px;
+          border: 3px solid green;
+          text-align: center;
         }
-
-        #a {
-            background-color: lightblue;
-            float:left;
+        
+        .center p {
+          line-height: 1.5;
+          display: inline-block;
+          vertical-align: middle;
         }
-
-        #b {
-            background-color: pink;
-            float:left;
-        }
-
-        #c {
-            margin-top:100px;
-            clear:left;
-            overflow:hidden;
-            text-align:center;
-            background-color: lightgray;
-        }
-    </style>
-</head>
-
-<body>
-    <div id="a">A</div>
-    <div id="b">B</div>
-    <div id="c">
-        Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsumdolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...  Lorem ipsum
-        dolor sit amet, ...
-    </div>
-
-</body>
-
-</html>
+        </style>
+        </head>
+        <body>
+        
+        <h2>Centering</h2>
+        <p>In this example, we use the line-height property with a value that is equal to the height property to center the div element:</p>
+        
+        <div class="center">
+          <p>I am vertically and horizontally centered.</p>
+        </div>
+        
+        </body>
+        </html>
+        

@@ -3,13 +3,14 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin:0;
     padding:0;
-
 }
 .banner img{
     height:50px;
 }
-.movie-heading{
+h1{
     font-size:24pt;
+}
+.movie-heading{
     text-align: center;
     font-weight:bold;
     font-family: Tahoma, Verdana,sans-serif;
@@ -41,7 +42,6 @@ body{
 .content-banner{
     height:83px;
     background-image:url("./images/rbg.png");
-  
 }
 .review{
     margin:2%;
@@ -49,6 +49,7 @@ body{
 }
 .rev-col-left{
     display:inline-block;
+    vertical-align: top;
     width:47%;
     padding-bottom: 20pt;
 }
