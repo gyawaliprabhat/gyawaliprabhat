@@ -2,34 +2,37 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .center {
-          line-height: 0px;
-          height: 200px;
-          border: 3px solid green;
-          text-align: center;
-        }
-        
-        .center p {
-          line-height: 1.5;
-          display: inline-block;
-          vertical-align: middle;
-        }
-        </style>
-        </head>
-        <body>
-        
-        <h2>Centering</h2>
-        <p>In this example, we use the line-height property with a value that is equal to the height property to center the div element:</p>
-        
-        <div class="center">
-          <p>I am vertically and horizontally centered.</p>
-        </div>
-        
-        </body>
-        </html>
-        
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+    
+</head>
+
+<body>
+
+  <form method="GET" action="http://www.google.com">
+      <label for="txtSearch">Search google</label>
+      <input id="txtSearch" type="text" pattern=".oo.y" name="q" />
+      <br>
+    
+      <label for="textEssay">Essay</label>
+      <textarea id="textEssay" name="essay"></textarea>
+      <br>
+      <label for="ddlFilter">Select Filter</label>
+      <select  id="ddlFilter" name="filterBy">
+       <optgroup label="hello">
+        <option  value="id">ID</option>
+        <option  value="firstname" selected>First Name</option>
+       </optgroup>
+        <option value="">Select</option>
+      </select>
+      <br>
+      <button>Submit query</button>
+      <button type="reset">reset</button>
+  </form>
+
+
+</body>
+
+</html>

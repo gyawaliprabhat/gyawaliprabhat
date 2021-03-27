@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/common.css" rel="stylesheet" />
+    <link href="css/webform1.css" rel="stylesheet"/>
+    <title>Login Form</title>
+</head>
+
+<body>
+    <div class="column center">
+        <div class="card">
+            <div class="card-header">
+               <span> Login Form</span>
+            </div>
+            <form>
+                <div class="input-group">
+                    <label for="txtEmail">Email address</label>
+                    <input id="txtEmail" placeholder="Enter email" type="text" name="email" />
+                    <span class="validation-msg">We'll never share your email with anyone else.</span>
+                </div>
+                <div class="input-group">
+                    <label for="txtPassword">Password</label>
+                    <input id="txtPassword" placeholder="Password" type="password" name="password" />
+                </div>
+                <div class="input-group">
+                    <label><input type="checkbox" name="hasToBeRemembered" />Check me out </label>
+                </div>
+                
+                    <input type="submit" value="Submit" class="btn" />
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="validator">
+		<a onclick="this.href='http://validator.w3.org/check?uri=' +document.URL"><img src="../images/w3c-html.png" alt="Valid HTML5" /></a>
+		<br />
+		<a  onclick="this.href='https://jigsaw.w3.org/css-validator/validator?uri=' +document.URL"><img src="../images/w3c-css.png"
+				alt="Valid CSS" /></a>
+	</div>
+
+</body>
+
+</html>

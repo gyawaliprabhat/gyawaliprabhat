@@ -1,0 +1,12 @@
+.btn{
+    background-color: rgba(30, 27, 255, 0.904);
+    /* border: 2px solid rgb(6, 32, 105); */
+    color:white;
+}
+.column{
+    width:60%;
+    margin-top:10%;
+}
+.card{
+    padding:20px;
+}
