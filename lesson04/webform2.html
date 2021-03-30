@@ -54,6 +54,9 @@
                     <label for="supplier">Supplier</label>
                     <select id="supplier" name="supplier">
                         <option value="">Select a supplier</option>
+                        <option value="Supplier 1">Supplier 1</option>
+                        <option value"Supplier 2">Supplier 2</option>
+                        
                     </select>
 
                 </div>
@@ -63,9 +66,9 @@
                     <span class="validation-msg">Enter a valid Date.</span>
                 </div>
                 <div class="button-field">
-                    <button type="reset" class="btn reset">Reset</button>
-                    <button class="btn cancel">Cancel</button>
-                    <button type="submit" class="btn add">Add Product</button>
+                    <button id="btnReset" type="reset" class="btn reset">Reset</button>
+                    <button id="btnCancel" class="btn cancel">Cancel</button>
+                    <button id="btnAdd" type="button" class="btn add">Add Product</button>
                 </div>
             </div>
           
@@ -78,6 +81,7 @@
 		<a  onclick="this.href='https://jigsaw.w3.org/css-validator/validator?uri=' +document.URL"><img src="../images/w3c-css.png"
 				alt="Valid CSS" /></a>
 	</div>
+    <script src="js/newProductForm.js"></script>
 </body>
 
 </html>

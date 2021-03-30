@@ -1,0 +1,69 @@
+.col-md-3{
+    text-align: right;
+}
+.card-header{
+    text-align: center;
+}
+.code{
+    background-color: black;
+    color:white;
+    max-height: 200px;
+    overflow: scroll;
+}
+#menu-section{
+    color:white;
+}
+.btn{
+    color:white;
+}
+.btn:hover{
+    color:red;
+}
+
+.test-section{
+    background-color: black;
+    height:max-content;
+    margin-top:5px;
+    height: 100%;
+}
+.test-section> .card-body > .card-title{
+    color:white;
+}
+.col-md > .card > .card-body{
+    padding-top:0px;
+    
+}
+/* #input-area,#output-area, .col-md-4.card{
+    background-color: black;
+    color:white;
+} */
+.help>p{
+    border:2px solid black;
+    padding:10px;
+    margin:5px 20px;
+}
+.col-md-4{
+    height: 560px;
+overflow: scroll;
+}
+#output{
+    background-color: black;
+    color:white;
+}
+
+pre, p{
+    margin-bottom: 5px;
+}
+.col-md-8{
+    height:500px
+}
+code{
+    color:white;
+}
+.col-md{
+    position:relative;
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:20px;
+}

@@ -10,6 +10,13 @@ body{
     width:48%;
     float:left;
 }
+
+.menu-list{
+    margin-top:8px !important;
+}
+.brand-name{
+    margin-top:8px !important;
+}
 .card-header{
     text-align: left;
 }

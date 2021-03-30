@@ -82,6 +82,7 @@ label>input[type=checkbox]{
     font-size:14px;
     color:#4b4e50;
 }
+
 .navbar{
     background-color:#3b9ed8;
     color:white;
@@ -109,7 +110,13 @@ label>input[type=checkbox]{
 .right-content >li>label.user-info{
     margin-right:10px;
 }
-
+input:invalid {
+    border: 2px solid red !important;
+  }
+  
+input:valid {
+    border: 1px solid #a3a8ad;
+}
 .navbar>.brand-name{
     font-size:20px;
     padding-right:50px;
