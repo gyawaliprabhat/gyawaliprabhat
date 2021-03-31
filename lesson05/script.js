@@ -1,3 +1,4 @@
+"use strict";
 let timer = null;
 const answers = {
     max(num1, num2) {
@@ -8,40 +9,32 @@ const answers = {
         }
     }
     , maxOfThree(num1, num2, num3) {
-        if (num1 > num2 && num1 > num3) {
-            return num1;
-        } else if (num2 > num3) {
-            return num2;
-        } else {
-            return num3;
-        }
+        let max = ((num1 < num2) ? num2: num1);
+        return ((max < num3) ? num3 :max);
     }
 
-    , isVowel(input) {
+    , isVowel(char) {
         const regExpression = /^[aeiou]$/;
-        if (regExpression.test(input)) {
-            return true;
-        }
-        return false;
+        return regExpression.test(char);
     }
-    , sumImperativeApproach(arr) {
+    , sumImperativeApproach(arrNumbers) {
         let sum = 0;
-        for (const num of arr) {
+        for (let num of arrNumbers) {
             sum += num;
         }
         return sum;
     }
 
-    , multiplyImperativeApproach(arr) {
+    , multiplyImperativeApproach(arrNumbers) {
         let multiply = 1;
-        for (const num of arr) {
+        for (let num of arrNumbers) {
             multiply *= num;
         }
         return multiply;
     }
 
     , reverse(str) {
-        let charArr = Array.from(str);
+        let charArr = [...str];
         let n = str.length - 1;
         for (let i = 0; i < Math.floor(n / 2); i++) {
             let temp = charArr[n - i];
@@ -51,7 +44,7 @@ const answers = {
         return charArr.join("");
     }
 
-    , findLongestWord(strArr) {
+    , findLongestWordLength(strArr) {
         return strArr.reduce((x, y) => x.length > y.length ? x : y, "").length;
     }
 
@@ -64,18 +57,18 @@ const answers = {
     }
 
     , printOddNumbersOnly(arrNum) {
-        console.log(arrNum.filter(x => x % 2 == 1));
+        return (arrNum.filter(x => x % 2 == 1));
     }
 
     , computeSumOfSquaresOfEvensOnly(arrNum) {
         return arrNum.filter(x => x % 2 == 0).map(x => x * x).reduce((x, y) => x + y);
     }
 
-    , sumFuncApporach(arr) {
-        return arr.reduce((x, y) => x + y, 0);
+    , sumFuncApporach(arrNumbers) {
+        return arrNumbers.reduce((x, y) => x + y, 0);
     }
-    , multiplyFucnApproach(arr) {
-        return arr.reduce((x, y) => x * y, 1);
+    , multiplyFucnApproach(arrNumbers) {
+        return arrNumbers.reduce((x, y) => x * y, 1);
     }
 
     , findSecondBiggest(arrNum) {
@@ -119,7 +112,7 @@ const answers = {
     }
 
     , showTime() {
-        timer = setInterval(getCurrentTime, 1000);
+        timer = setInterval(getCurrentTime, 500);
         function getCurrentTime() {
             let currentDate = new Date();
             let date = currentDate.getFullYear() + "-" + addZeroBefore(currentDate.getMonth() + 1) + 
@@ -164,9 +157,9 @@ window.onload = () => {
             let pre = document.createElement("pre");
             code.appendChild(pre);
             pre.innerHTML = "   function "+ answers[key].toString();
-            pre = document.createElement("pre");
+            let preInput = document.createElement("pre");
             let parameters = answers[key].toString().split('\n')[0].match(/\(.*\)/)[0].replace("(", "").replace(")", "");
-            pre.innerHTML = parameters;
+            preInput.innerHTML = parameters;
             
             if (parameters) {
                 if (timer) {
@@ -176,7 +169,7 @@ window.onload = () => {
                 document.getElementById("input-section").style.display = "block";
                 hint.innerHTML = "";
                 btnRun.innerHTML = "Run Function " + key;
-                hint.appendChild(pre);
+                hint.appendChild(preInput);
             } else {
                 txtOutput.value = "";
                 document.getElementById("input-section").style.display = "none";
