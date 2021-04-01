@@ -186,3 +186,4 @@ window.onload = () => {
     });
     console.log(menuSection.firstElementChild.click());
 };
+console.log("hello");

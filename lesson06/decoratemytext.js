@@ -1,4 +1,8 @@
 /*jshint esversion: 6 */
+
+/**
+ * For Extra credit i have used the arrow function in the programming
+ */
 window.onload = function () {
     "use strict";
     const txtTextArea = document.getElementById("txtTextArea");
@@ -21,21 +25,26 @@ window.onload = function () {
     };
 
     function convertText(str) {
-        let regex = /[aeiou]/;
+        let regex = /[aeiou]/; // using  regular expression to check vowel
         let i = 0;
         while (i < str.length) {
-            if (regex.test(str[i])) {
-                break;
+            if (regex.test(str[i])) { // go through each character and check either it is vowel or not
+                break;  // if vowel is found then it breaks the loop.
             }
             i++;
         }
-        return `${str.substring(i, str.length)}${str.substring(0, i)}ay`;
+        /**
+         * Here i tracks the location of the vowel so all the consonants before vowel are 
+         * appended to the last. Also adding ay to the string if vowel found;
+         */
+        return `${str.substring(i, str.length)}${str.substring(0, i)}ay`; 
+        
 
     }
     function biggerDecoration(size) {
         return function () {
             if (timer) {
-                clearInterval(timer);
+                clearInterval(timer);  //clearing the timer if it is already set;
                 timer = null;
                 return;
             }
