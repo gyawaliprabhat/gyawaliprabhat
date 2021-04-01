@@ -1,6 +1,7 @@
+/*jshint esversion: 6 */
 window.onload = function(){
     // let input = Array.from(document.getElementsByTagName("input"));
-    [..."hello"].sort()
+    [..."hello"].sort();
     const txtEmail = document.getElementById("txtEmail");
     const txtPassword = document.getElementById("txtPassword");
     const txtUrl = document.getElementById("url");
@@ -15,5 +16,5 @@ window.onload = function(){
         console.log("Password : "+ txtPassword.value);
         console.log("Url : " +txtUrl.value);
         console.log(chkIsChecked.checked? "Checked":"Not Checked");
-    }
-}
+    };
+};
