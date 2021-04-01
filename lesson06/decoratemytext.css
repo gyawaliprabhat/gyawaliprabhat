@@ -26,3 +26,9 @@ textarea {
 	font-family: monospace;
 	font-size: 12pt;
 }
+.validator{
+    position:fixed;
+    bottom:0px;
+    right:0;
+    opacity: 0.8;
+}

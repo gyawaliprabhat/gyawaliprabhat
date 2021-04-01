@@ -1,4 +1,4 @@
-// alert("hello, world");
+/*jshint esversion: 6 */
 window.onload = function () {
     "use strict";
     const txtTextArea = document.getElementById("txtTextArea");
@@ -12,13 +12,13 @@ window.onload = function () {
 
     btnMalkovitch.onclick = function () {
         const regex = /\S{5,}/gm;
-        console.log(txtTextArea)
+        console.log(txtTextArea);
         txtTextArea.value = txtTextArea.value.replaceAll(regex, "Malkovich");
-    }
+    };
 
     btnConvertText.onclick = function () {
         txtTextArea.value = convertText(txtTextArea.value);
-    }
+    };
 
     function convertText(str) {
         let regex = /[aeiou]/;
@@ -46,13 +46,13 @@ window.onload = function () {
                 txtTextArea.style.fontSize = sizeInInt + "pt";
             }, 500);
 
-        }
+        };
     }
     chkBling.onchange = function (e) {
         if (e.currentTarget.checked) {
             body.style.backgroundImage = "url(hundred-dollar-bill.jpg)";
             body.style.backgroundSize = "100%";
-            body.style.backgroundRepeat = "no-repeat"
+            body.style.backgroundRepeat = "no-repeat";
             txtTextArea.style.fontWeight = "bold";
             txtTextArea.style.color = "green";
             txtTextArea.style.textDecoration = "underline";
@@ -62,6 +62,6 @@ window.onload = function () {
             txtTextArea.style.color = "black";
             txtTextArea.style.textDecoration = "none";
         }
-    }
-}
+    };
+};
 
