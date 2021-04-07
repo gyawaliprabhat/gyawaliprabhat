@@ -28,7 +28,7 @@
             rawFile.onreadystatechange = function () {
                 if (rawFile.readyState === 4) {
                     if (rawFile.status === 200 || rawFile.status == 0) {
-                        var allText = rawFile.responseText.split("\n").map((x,i)=> x.trim()? `<span> ${i+1}.</span> ${x} `:"").reduce((x,y)=> x+y);
+                        var allText = rawFile.responseText.split("\n").map((x,i)=> x.trim()? `<span> ${i+1}.</span> ${x} \n`:"").reduce((x,y)=> x+y);
                         let text =allText.split(/\/\//).map((t, i)=> (i==0 ? "" : (`<p> <pre> ${t} </pre> </p>`)));
                         document.getElementById("code").innerHTML = (text.reduce((x,y,i) => x+y));
                     }
