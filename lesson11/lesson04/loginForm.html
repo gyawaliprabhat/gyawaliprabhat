@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/common.css" rel="stylesheet" />
+    <link href="css/loginForm.css" rel="stylesheet"/>
+    <title>Login Form</title>
+</head>
+
+<body>
+    <div class="column center">
+        <div class="card">
+            <div class="card-header">
+               <span> Login Form</span>
+            </div>
+            <form id ="loginForm" name="loginForm">
+                <div class="input-group">
+                    <label for="txtEmail">Email address</label>
+                    <input id="txtEmail" placeholder="Enter email" type="text" pattern="[a-zA-Z]+[a-zA-Z0-9]*.?[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2,}" name="email"  required/>
+                    <span class="validation-msg">We'll never share your email with anyone else.</span>
+                </div>
+                <div class="input-group">
+                    <label for="txtPassword">Password</label>
+                    <input id="txtPassword" placeholder="Password" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{10,}" title="Password field is at least 10 characters in length and contain at least one number and one uppercase and lowercase letter" type="password" name="password" required />
+                </div>
+                <div class="input-group">
+                    <label for="url">URL</label>
+                    <input type="text" title="URL beginning with either the string, http:// or https://" placeholder="Enter URL" pattern="https?:\/\/.*" name="url" id="url" />
+                </div>
+                <div class="input-group">
+                    <label><input type="checkbox" id="hasToBeRemembered" name="hasToBeRemembered" />Check me out </label>
+                </div>
+                
+                    <input type="submit" id="onSubmit" value="Submit" id="submitBtn" class="btn" />
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="validator">
+		<a onclick="this.href='http://validator.w3.org/check?uri=' +document.URL"><img src="../../images/w3c-html.png" alt="Valid HTML5" /></a>
+		<br />
+		<a  onclick="this.href='https://jigsaw.w3.org/css-validator/validator?uri=' +document.URL"><img src="../../images/w3c-css.png"
+				alt="Valid CSS" /></a>
+	</div>
+    <script src="../libs/jquery-3.6.0.js"></script>
+    <script src="js/loginForm.js" ></script>    
+</body>
+
+</html>

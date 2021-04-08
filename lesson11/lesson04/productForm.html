@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/common.css" rel="stylesheet" />
+    <link href="css/productForm.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="brand-name">
+            <span>MUM Golden Dome Market : : : SRM System</span>
+        </div>
+        <ul class="menu-list">
+            <li>Products</li>
+            <li>Suppliers</li>
+        </ul>
+        <ul class="right-content">
+            <li><label class="user-info">Hello!</label></li>
+            <li><button class="btn">Sign Out</button></li>
+        </ul>
+    </div>
+    <form id="productForm">
+        <div class="column">
+            <div class="card-header">
+                <span>New Product Form</span>
+            </div>
+
+            <div class="left-column">
+                <div class="input-group">
+                    <label for="productNo">Product Number</label>
+                    <input type="text" id="productNo" name="productNo" required/>
+                </div>
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required/>
+                </div>
+                <div class="input-group">
+                    <label for="unitPrice">Unit Price</label>
+                    <input type="text" id="unitPrice" value="0.0" name="unitPrice" required/>
+                </div>
+            </div>
+            <div class="right-column">
+                <div class="input-group">
+                    <label for="quantity">Quantity in stock</label>
+                    <input type="text" id="quantity" name="quantity" required/>
+                </div>
+                <div class="input-group">
+                    <label for="supplier">Supplier</label>
+                    <select id="supplier" name="supplier" required>
+                        <option value="">Select a supplier</option>
+                        <option value="Supplier 1">Supplier 1</option>
+                        <option value="Supplier 2">Supplier 2</option>
+                        
+                    </select>
+
+                </div>
+                <div class="input-group">
+                    <label for="dateSupplied">Date Supplied</label>
+                    <input type="date" id="dateSupplied" name="dateSupplied" required/>
+                    <span class="validation-msg">Enter a valid Date.</span>
+                </div>
+                <div class="button-field">
+                    <button id="btnReset" type="reset" class="btn reset">Reset</button>
+                    <button id="btnCancel" class="btn cancel">Cancel</button>
+                    <button id="btnAdd" type="submit" class="btn add">Add Product</button>
+                </div>
+            </div>
+            
+          
+        </div>
+    </form>
+
+    <div class="validator">
+		<a onclick="this.href='http://validator.w3.org/check?uri=' +document.URL"><img src="../../images/w3c-html.png" alt="Valid HTML5" /></a>
+		<br />
+		<a  onclick="this.href='https://jigsaw.w3.org/css-validator/validator?uri=' +document.URL"><img src="../../images/w3c-css.png"
+				alt="Valid CSS" /></a>
+	</div>
+    <script src="../libs/jquery-3.6.0.js"></script>
+    <script src="js/newProductForm.js"></script>
+</body>
+
+</html>

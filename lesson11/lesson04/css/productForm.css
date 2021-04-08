@@ -1,0 +1,50 @@
+body{
+    margin:0px;
+    padding:0px;
+}
+.right-column{
+    width:48%;
+    float:right;
+}
+.left-column{
+    width:48%;
+    float:left;
+}
+
+.menu-list{
+    margin-top:8px !important;
+}
+.brand-name{
+    margin-top:8px !important;
+}
+.card-header{
+    text-align: left;
+}
+.column{
+  width:80%;
+  margin:auto;
+}
+.button-field{
+    text-align: right;
+    float:right;
+}
+.button-field button{
+    margin-left:20px;
+}
+.btn.reset{
+    border: 2px solid blue;
+    background-color: white;
+    color:blue;
+}
+.btn.cancel{
+    border: 2px solid darkorange;
+    background-color: white;
+    color:darkorange;
+}
+.btn.add{
+    border: 2px solid #3b9ed8;
+    background-color: white;
+    color:#3b9ed8;
+}
+
+
