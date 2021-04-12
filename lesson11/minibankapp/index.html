@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CS472 MiniBankingApp</title>
     <link rel="stylesheet" href="css/styles.css">
-     <script src="../libs/jquery-3.6.0.js"></script>
+    <script src="../libs/jquery-3.6.0.js"></script>
     <script defer src="./js/minibankapp.js"></script>
 </head>
+
 <body>
     <header>
         <nav>
@@ -35,7 +37,8 @@
                             <label for="txtAccountNo">Account No</label>
                         </div>
                         <div class="form-item">
-                            <input class="form-ctrl" type="text" name="txtAccountNo" id="txtAccountNo" placeholder="01-XXX-XXXX" required autofocus pattern="01-\d{3}-\d{4}">
+                            <input class="form-ctrl" type="text" name="txtAccountNo" id="txtAccountNo"
+                                placeholder="01-XXX-XXXX" required autofocus pattern="01-\d{3}-\d{4}">
                         </div>
                         <div class="form-item small-instr-text">
                             <span>Enter your unique account number.</span>
@@ -46,7 +49,8 @@
                             <label for="txtCustomerName">Customer Name</label>
                         </div>
                         <div class="form-item">
-                            <input class="form-ctrl" type="text" name="txtCustomerName" id="txtCustomerName" placeholder="e.g. John B. Smith" required>
+                            <input class="form-ctrl" type="text" name="txtCustomerName" id="txtCustomerName"
+                                placeholder="e.g. John B. Smith" required>
                         </div>
                     </div>
                     <div class="form-row">
@@ -62,12 +66,15 @@
                                 <option value="Current">Current</option>
                             </select>
                         </div>
-                    </div>   
+                    </div>
                     <div class="form-row">
                         <input class="btn-std-med" type="submit" value="Create New Account">
-                    </div>                                     
+                    </div>
                 </fieldset>
             </form>
+            <p class="note">All the Checkbox for Accounts Type is generated dynamically here through jquery so if you
+                add any Option in above  account type then code will automatically generated the checked box
+                for added option. This code will support all the searching account for the added option also without modification on js code</p>
             <table id="tblAccounts">
                 <caption>List of Customer Accounts</caption>
                 <thead>
@@ -106,4 +113,5 @@
         </div>
     </footer>
 </body>
+
 </html>
