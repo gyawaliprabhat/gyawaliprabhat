@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax|Json Implementation</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg  bg-primary">
+        <a class="navbar-brand text-white" href="#">CS472:::MiniBankingApp</a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto ">
+                <li class="nav-item">
+                    <a class="nav-link text-secondary" href="#">Home </a>
+                </li>
+            </ul>
+
+            <div class="right-section">
+                <span class="navbar-text text-white">
+                    Welcome, Guest
+                </span>
+                <button class="btn btn-primary">SignOut</button>
+            </div>
+        </div>
+    </nav>
+    <div class="modal" id="stateInformationModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalTitle">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p id="modalBody">Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-12 col-sm-12 ">
+                <div class="card border-0">
+                    <div class="card-title">
+                        <br>
+                        <h2>New Book Form</h2>
+                    </div>
+                    <div class="card-body">
+                        <form id="bookForm" class="col-md-12">
+                            <div class="row">
+
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <label for="title" class="form-label">*Book Title</label>
+                                        <input type="text"  class="form-control" id="title" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="isbn" class="form-label">*ISBN</label>
+                                        <input type="text" title="Please Enter the numeric value more then 2 digit" pattern="\d{3,}" class="form-control" id="isbn" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="overdueFee" class="form-label">*Overdue Fee per day</label>
+                                        <input type="text" title class="form-control" pattern="\d*\.?\d+$" title="Required decimal numbers" placeholder="0.00" id="overdueFee" required>
+                                        <div class="form-text text-muted">Enter a valid decimal amount, in dollars and cents;no comma (e.g 1.99)</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="publisher" class="form-label">*Publisher</label>
+                                        <input type="text" class="form-control" id="publisher" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="datePublished" class="form-label">*Date Published</label>
+                                        <input type="date"  class="form-control" id="datePublished" required>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-12">
+                                    <div class="col-md-3  float-right">
+                                        <button type="submit" id="onSubmit"
+                                            class="btn btn-sm btn-block btn-success btn-large">
+                                            <span class="spinner-border spinner-border-sm d-none" id="spinner" role="status" aria-hidden="true"></span>
+                                            Save Book</button>
+                                    </div>
+                                    <div class="col-md-2  float-right">
+                                        <button class="btn btn-block btn-sm btn-danger btn-large float-right"
+                                            type="reset">Reset</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </form>
+                        <div class="col-md-12 mt-5">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">ISBN</th>
+                                        <th scope="col">Book Title</th>
+                                        <th scope="col">Overdue Fee</th>
+                                        <th scope="col">Publisher</th>
+                                        <th scope="col">DatePublished</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tblRows">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer text-muted" style="position: fixed; bottom:0px; width:100%">
+        <span>CS472-WAP:::Banking WebApp</span>
+        <span class="float-right">Prabhat Gyawali, MIU:::&nbsp;&copy;&nbsp;April&nbsp;2021</span>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+</body>
+
+</html>
